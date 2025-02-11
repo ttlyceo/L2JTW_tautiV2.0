@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 覺醒技能-其他 -->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="1571" levels="1" name="Awakened Class Inventory Increase">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="operateType" val="P"/>
+	</skill>
+	<skill id="1572" levels="1" name="Awakened Class Weight Increase">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="operateType" val="P"/>
+	</skill>
+	<skill id="1597" levels="1" name="Awakened Class Weight Increase">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="operateType" val="P"/>
+	</skill>
+	<skill id="1901" levels="1" name="Aim">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x10" stat="STR" val="3" />
+			<mul order="0x30" stat="rCrit" val="0.97" />
+		</for>
+	</skill>
+	<skill id="1902" levels="1" name="Mental Fortress">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="mDef" val="18" />
+			<add order="0x40" stat="mAtk" val="32" />
+			<add order="0x40" stat="pAtk" val="31" />
+		</for>
+	</skill>
+	<skill id="1903" levels="1" name="HP MP Regen">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="regHp" val="1" />
+			<add order="0x40" stat="regMp" val="1" />
+		</for>
+	</skill>
+	<skill id="1904" levels="1" name="Unbind">
+		<set name="hitTime" val="1000" />
+		<set name="mpConsume" val="43" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="counter_skill" >
+				<mul order="0x30" stat="poisonVuln" val="0" />
+				<mul order="0x30" stat="bleedVuln" val="0" />
+				<mul order="0x30" stat="stunVuln" val="0" />
+				<mul order="0x30" stat="rootVuln" val="0" /> 
+			</effect>
+		</for>
+	</skill>
+	<skill id="1905" levels="1" name="Swiftness">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="pAtkSpd" val="4" />
+			<add order="0x40" stat="mAtkSpd" val="3" />
+		</for>
+	</skill>
+	<skill id="1906" levels="1" name="Water Blessing">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="waterRes" val="10" />
+			<add order="0x40" stat="regMp" val="2" />
+			<add order="0x40" stat="waterPower" val="10" />
+		</for>
+	</skill>
+	<skill id="1907" levels="1" name="Prevision">
+		<!-- 专心 -->
+		<set name="hitTime" val="1000" />
+		<set name="mpConsume" val="43" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="counter_skill" >
+				<add order="0x40" stat="rEvas" val="30" />
+				<add order="0x40" stat="magicSuccRes" val="30" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="1908" levels="1" name="Delicacy">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="mCritRate" val="10" />
+			<add order="0x40" stat="rCrit" val="15" />
+		</for>
+	</skill>
+	<skill id="1909" levels="1" name="Delicacy">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+	</skill>
+	<skill id="1910" levels="1" name="Dark Presence">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x10" stat="STR" val="1" />
+			<add order="0x10" stat="INT" val="1" />
+			<game night="true" />
+		</for>
+	</skill>
+	<skill id="1911" levels="1" name="Wind Blessing">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="windRes" val="10" />
+			<add order="0x40" stat="windPower" val="10" />
+		</for>
+	</skill>
+	<skill id="1913" levels="1" name="Life Siphon">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="absorbDam" val="1" />
+		</for>
+	</skill>
+	<skill id="1914" levels="1" name="Savage">
+		<set name="hitTime" val="1000" />
+		<set name="mpConsume" val="43" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="counter_skill" >
+				<mul order="0x30" stat="pAtkSpd" val="1.17" />
+				<mul order="0x30" stat="pDef" val="0.85" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="1915" levels="1" name="Fire Blessing">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="fireRes" val="10" />
+			<add order="0x40" stat="firePower" val="10" />
+		</for>
+	</skill>
+	<skill id="1916" levels="1" name="Energetic">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="regHp" val="3" />
+		</for>
+	</skill>
+	<skill id="1919" levels="1" name="Dexterity">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<mul order="0x30" stat="pAtk" val="1.02" /> 
+		</for>
+	</skill>
+	<skill id="1921" levels="1" name="Earth Blessing">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="earthRes" val="10" />
+			<add order="0x40" stat="earthPower" val="10" />
+		</for>
+	</skill>
+	<skill id="1923" levels="1" name="Battle Instinct">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="pvpPhysDmg" val="1.01" />
+		</for>
+	</skill>
+	<skill id="1924" levels="1" name="Dark Blessing">
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="darkRes" val="10" />
+			<add order="0x40" stat="darkPower" val="10" />
+		</for>
+	</skill>
+	<skill id="1925" levels="1" name="Soul Protection">
+		<set name="hitTime" val="1000" />
+		<set name="mpConsume" val="43" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="counter_skill" >
+				<mul order="0x30" stat="debuffVuln" val="0.5" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="1927" levels="1" name="席格爾靈氣">
+<!-- 		<table name="#desc-LV1">將可增加物理攻擊力1%的席格爾之力賦予給隊員。</table> -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="T"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<for>
+			<effect count="0x7fffffff" name="ChanceSkillTrigger" abnormalTime="6" val="0" triggeredId="1928" chanceType="ON_ACTION_TIME" /><!--effectType="BUFF"/-->
+		</for>
+	</skill>
+	<skill id="1928" levels="1" name="席格爾之力">
+<!-- 		<table name="#desc-LV1">增加物理攻擊力1%的狀態。</table> -->
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="A2"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<set name="skillRadius" val="600" /> 
+		<for>
+			<effect count="2" name="Buff" abnormalTime="7" val="0" abnormalLvl="85" abnormalType="sigel_force">
+				<mul order="0x30" stat="pAtk" val="1.01"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1929" levels="1" name="提爾靈氣">
+<!-- 		<table name="#desc-LV1">將可增加物理致命攻擊率1%的提爾之力賦予給隊員。</table> -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="T"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<for>
+			<effect count="0x7fffffff" name="ChanceSkillTrigger" abnormalTime="6" val="0" triggeredId="1930" chanceType="ON_ACTION_TIME" /><!--effectType="BUFF"/-->
+		</for>
+	</skill>
+	<skill id="1930" levels="1" name="提爾之力">
+<!-- 		<table name="#desc-LV1">增加物理致命攻擊率1%的狀態。</table> -->
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="A2"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<set name="skillRadius" val="600" /> 
+		<for>
+			<effect count="2" name="Buff" abnormalTime="7" val="0" abnormalLvl="85" abnormalType="tyrr_force">
+				<mul order="0x30" stat="rCrit" val="1.01"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1931" levels="1" name="歐瑟靈氣">
+<!-- 		<table name="#desc-LV1">將可增加攻擊速度1%的歐瑟之力賦予給隊員。</table> -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="T"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<for>
+			<effect count="0x7fffffff" name="ChanceSkillTrigger" abnormalTime="6" val="0" triggeredId="1932" chanceType="ON_ACTION_TIME" /><!--effectType="BUFF"/-->
+		</for>
+	</skill>
+	<skill id="1932" levels="1" name="歐瑟之力">
+<!-- 		<table name="#desc-LV1">增加攻擊速度1%的狀態。</table> -->
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="A2"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<set name="skillRadius" val="600" /> 
+		<for>
+			<effect count="2" name="Buff" abnormalTime="7" val="0" abnormalLvl="85" abnormalType="othell_force">
+				<mul order="0x30" stat="pAtkSpd" val="1.01"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1933" levels="1" name="尤爾靈氣">
+<!-- 		<table name="#desc-LV1">將可增加MP額外恢復量50%的尤爾之力賦予給隊員。</table> -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="T"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<for>
+			<effect count="0x7fffffff" name="ChanceSkillTrigger" abnormalTime="6" val="0" triggeredId="1934" chanceType="ON_ACTION_TIME" /><!--effectType="BUFF"/-->
+		</for>
+	</skill>
+	<skill id="1934" levels="1" name="尤爾之力">
+<!-- 		<table name="#desc-LV1">增加MP額外恢復量50%的狀態。</table> -->
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="A2"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<set name="skillRadius" val="600" /> 
+		<for>
+			<effect count="2" name="Buff" abnormalTime="7" val="0" abnormalLvl="85" abnormalType="yul_force">
+				<mul order="0x30" stat="regMp" val="1.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1935" levels="1" name="菲歐靈氣">
+<!-- 		<table name="#desc-LV1">將可增加施法速度1%的菲歐之力賦予給隊員。</table> -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="T"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<for>
+			<effect count="0x7fffffff" name="ChanceSkillTrigger" abnormalTime="6" val="0" triggeredId="1936" chanceType="ON_ACTION_TIME" /><!--effectType="BUFF"/-->
+		</for>
+	</skill>
+	<skill id="1936" levels="1" name="菲歐之力">
+<!-- 		<table name="#desc-LV1">增加施法速度1%的狀態。</table> -->
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="A2"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<set name="skillRadius" val="600" /> 
+		<for>
+			<effect count="2" name="Buff" abnormalTime="7" val="0" abnormalLvl="85" abnormalType="feoh_force">
+				<mul order="0x30" stat="mAtkSpd" val="1.01"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1937" levels="1" name="維因靈氣">
+<!-- 		<table name="#desc-LV1">將可降低物理/魔法技能的MP消耗量3%的維因之力賦予給隊員。</table> -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="T"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<for>
+			<effect count="0x7fffffff" name="ChanceSkillTrigger" abnormalTime="6" val="0" triggeredId="1938" chanceType="ON_ACTION_TIME" /><!--effectType="BUFF"/-->
+		</for>
+	</skill>
+	<skill id="1938" levels="1" name="維因之力">
+<!-- 		<table name="#desc-LV1">降低物理/魔法技能的MP消耗量的狀態3%。</table> -->
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="A2"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<set name="skillRadius" val="600" /> 
+		<for>
+			<effect count="2" name="Buff" abnormalTime="7" val="0" abnormalLvl="85" abnormalType="wynn_force">
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.97"/>
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="1939" levels="1" name="艾羅靈氣">
+<!-- 		<table name="#desc-LV1">將可增加魔法攻擊力1%的艾羅之力賦予給隊員。</table> -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="T"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<for>
+			<effect count="0x7fffffff" name="ChanceSkillTrigger" abnormalTime="6" val="0" triggeredId="1940" chanceType="ON_ACTION_TIME" /><!--effectType="BUFF"/-->
+		</for>
+	</skill>
+	<skill id="1940" levels="1" name="艾羅之力">
+<!-- 		<table name="#desc-LV1">增加魔法攻擊力1%的狀態。</table> -->
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="A2"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="magicLvl" val="85"/>
+		<set name="skillRadius" val="600" /> 
+		<for>
+			<effect count="2" name="Buff" abnormalTime="7" val="0" abnormalLvl="85" abnormalType="aeore_force">
+				<mul order="0x30" stat="mAtk" val="1.01"/>
+			</effect>
+		</for>
+	</skill>
+</list>

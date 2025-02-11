@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+<!-- 斗篷 -->
+	<!-- 覺醒斗篷 -->
+	<item id="30310" name="亞貝里烏斯斗篷" type="Armor">
+		<table name="#Plus">席格爾騎士</table>
+		<table name="#Desc">繼承古代巨人-亞貝里烏斯之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="mDef" val="40"/>
+			<add order="0x10" stat="pDef" val="50"/>
+		</for>
+	</item>
+	<item id="30311" name="薩菲洛斯斗篷" type="Armor">
+		<table name="#Plus">提爾鬥士</table>
+		<table name="#Desc">繼承古代巨人-薩菲洛斯之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="mDef" val="40"/>
+			<add order="0x10" stat="pDef" val="50"/>
+		</for>
+	</item>
+	<item id="30312" name="凱修納格斗篷" type="Armor">
+		<table name="#Plus">歐瑟遊俠</table>
+		<table name="#Desc">繼承古代巨人-凱修納格之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="mDef" val="40"/>
+			<add order="0x10" stat="pDef" val="50"/>
+		</for>
+	</item>
+	<item id="30313" name="克倫畢斯特斗篷" type="Armor">
+		<table name="#Plus">尤爾弓手</table>
+		<table name="#Desc">繼承古代巨人-克倫畢斯特之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="mDef" val="40"/>
+			<add order="0x10" stat="pDef" val="50"/>
+		</for>
+	</item>
+	<item id="30314" name="索特克里格斗篷" type="Armor">
+		<table name="#Plus">菲歐巫師</table>
+		<table name="#Desc">繼承古代巨人-索特克里格之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="mDef" val="40"/>
+			<add order="0x10" stat="pDef" val="50"/>
+		</for>
+	</item>
+	<item id="30315" name="納比亞羅普斗篷" type="Armor">
+		<table name="#Plus">維因召喚士</table>
+		<table name="#Desc">繼承古代巨人-納比亞羅普之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="mDef" val="40"/>
+			<add order="0x10" stat="pDef" val="50"/>
+		</for>
+	</item>
+	<item id="30316" name="拉伊斯特斗篷" type="Armor">
+		<table name="#Plus">伊斯法師</table>
+		<table name="#Desc">繼承古代巨人-拉伊斯特之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="mDef" val="40"/>
+			<add order="0x10" stat="pDef" val="50"/>
+		</for>
+	</item>
+	<item id="30317" name="拉奇西斯斗篷" type="Armor">
+		<table name="#Plus">艾羅牧師</table>
+		<table name="#Desc">繼承古代巨人-拉奇西斯之力的人所裝備的斗篷。魔法防禦+40。無法交易、丟棄、刪除的道具，但可以保管在個人倉庫。裝備所有S級、S80級的防具系列，或裝備R級以上的防具上衣時，封印的斗篷欄位將會開啟。</table>
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="crystal_type" val="r"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="mDef" val="40"/>
+			<add order="0x10" stat="pDef" val="50"/>
+		</for>
+	</item>
+	<!-- 其他斗篷 -->
+	<item id="22390" name="萬聖夜斗篷" type="Armor">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">可以感受到超凡魅力的斗篷。此物為萬聖夜活動獎勵道具。無法交易、丟棄的道具，但可以刪除，也可以保管在個人倉庫。</table>
+		<set name="icon" val="BranchSys3.Icon.g_halloween_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add order="0x10" stat="pDef" val="20"/>
+		</for>
+	</item>
+	<item id="22480" name="聖誕少女斗篷" type="Armor">
+		<table name="#Plus">活動</table>
+		<table name="#Desc">可以同時感受到輕盈與寬鬆的斗篷。此物為聖誕少女的聖誕活動獎勵道具。無法交易、丟棄的道具，但可以刪除，也可以保管在個人倉庫。</table>
+		<set name="icon" val="BranchSys3.icon.g_christmas_cloak"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add order="0x10" stat="pDef" val="20"/>
+		</for>
+	</item>
+	<item id="22611" name="新天堂II緣份覺醒派對紀念斗篷" type="Armor">
+		<table name="#Desc">突顯純白之美的斗篷。新天堂II緣份覺醒派對紀念活動所給予的道具。開啟斗篷欄位後便可以進行裝備。無法交易/丟棄的道具，但可以刪除，也可以保管在個人倉庫。透過維他命管理者可與帳號內的其他角色共享。</table>
+		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i02"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="25"/>
+		</for>
+	</item>
+	<item id="23636" name="波蘭專用斗篷" type="Armor">
+		<table name="#Desc">波蘭專用斗篷。印著華麗紋樣。無法交易/丟棄的道具，但可以刪除，也可以保管在個人倉庫。</table>
+		<set name="icon" val="BranchSys3.icon1.g_pl_cape"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<for>
+			<add order="0x10" stat="pDef" val="25"/>
+		</for>
+	</item>
+	<item id="36051" name="血盟斗篷-一般" type="Armor">
+		<table name="#Desc">以血締結的決議！象徵血盟名譽的血盟專用斗篷。可透過血盟委託來獲得。只有加入血盟的血盟成員才可裝備。無法交易/丟棄/買賣的道具，但可以利用個人倉庫。裝備所有S級、S80級防具系列或R級以上的防具上衣的話，封印的斗篷欄位將會開啟。</table>
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="mDef" val="40"/>
+			<add order="0x10" stat="pDef" val="50"/>
+		</for>
+	</item>
+	<item id="36052" name="血盟斗篷-根據地(拍賣型)" type="Armor">
+		<table name="#Desc">以血締結的決議！象徵血盟名譽的血盟專用斗篷。擁有拍賣型根據地的血盟的血盟成員才可裝備。無法交易/丟棄/買賣的道具，但可以利用個人倉庫。裝備所有S級、S80級防具系列或R級以上的防具上衣的話，封印的斗篷欄位將會開啟。</table>
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="mDef" val="40"/>
+			<add order="0x10" stat="pDef" val="50"/>
+		</for>
+	</item>
+	<item id="36053" name="血盟斗篷-城" type="Armor">
+		<table name="#Desc">以血締結的決議！象徵血盟名譽的血盟專用斗篷。只有擁有城的血盟的血盟成員才可裝備。具有STR+2/INT+2的效果。無法交易/丟棄/買賣的道具，但可以利用個人倉庫。裝備所有S級、S80級防具系列或R級以上的防具上衣的話，封印的斗篷欄位將會開啟。</table>
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="mDef" val="40"/>
+			<add order="0x10" stat="pDef" val="50"/>
+		</for>
+	</item>
+	<item id="36120" name="血盟斗篷-根據地(佔領型)" type="Armor">
+		<table name="#Desc">以血締結的決議！象徵血盟名譽的血盟專用斗篷。擁有佔領型根據地的血盟的血盟成員才可裝備。具有STR+1/INT+1的效果。無法交易/丟棄/買賣的道具，但可以利用個人倉庫。裝備所有S級、S80級防具系列或R級以上的防具上衣的話，封印的斗篷欄位將會開啟。</table>
+		<set name="icon" val="icon.vesper_cloack_i00"/>
+		<set name="default_action" val="equip"/>
+		<set name="bodypart" val="back"/>
+		<set name="material" val="cloth"/>
+		<set name="weight" val="220"/>
+		<cond msgId="2453">
+			<player cloakStatus="1"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="mDef" val="40"/>
+			<add order="0x10" stat="pDef" val="50"/>
+		</for>
+	</item>
+</list>

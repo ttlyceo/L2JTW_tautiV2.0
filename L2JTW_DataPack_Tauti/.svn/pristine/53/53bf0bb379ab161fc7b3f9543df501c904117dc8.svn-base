@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 覺醒技能-維因召喚士 -->
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="11251" levels="1" name="Grand Weapon Mastery">
+		<set name="magicLvl" val="85" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x10" stat="INT" val="2" />
+			<add order="0x40" stat="mAtk" val="103" />
+			<mul order="0x30" stat="mAtkSpd" val="1.23" />
+			<add order="0x40" stat="pAtk" val="82" />
+			<basemul order="0x30" stat="mCritRate" val="1.06" />
+			<basemul order="0x30" stat="MagicalMpConsumeRate" val="0.94" />
+			<basemul order="0x30" stat="regMp" val="1.2" />
+		</for>
+	</skill>
+	<skill id="11252" levels="1" name="Grand Robe Mastery">
+		<set name="magicLvl" val="85" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x10" stat="INT" val="2" />
+			<add order="0x40" stat="pDef" val="135">
+				<using kind="Magic" />
+			</add>
+			<mul order="0x30" stat="mAtkSpd" val="1.05">
+				<using kind="Magic" />
+			</mul>
+		</for>
+	</skill>
+	<skill id="11253" levels="1" name="Grand Magic Mastery">
+		<set name="magicLvl" val="85" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="mDef" val="139" />
+			<mul order="0x30" stat="magicDamVul" val="0.65" />
+			<mul order="0x30" stat="mReuse" val="0.75" />
+		</for>
+	</skill>
+	<skill id="11254" levels="4" name="極致精通召喚">
+	<!--
+		<table name="#desc-LV1">增加INT2，在召喚點數4以內可以召喚出使魔。當自己遭受傷害的話，就能引導出使魔的憤怒。</table>
+	-->
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#maxSummonPoint"> 6 7 8 9 </table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="operateType" val="P"/>
+		<set name="magicLvl" val="#magicLvl"/>
+		<for>
+			<set order="0x10" stat="maxSummonPoint" val="#maxSummonPoint" />
+		</for>
+	</skill>
+	<skill id="11255" levels="1" name="Grand Spirit Mastery">
+		<table name="#vuln"> 30 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x10" stat="INT" val="2" />
+			<sub order="0x40" stat="bleedVuln" val="#vuln" />
+			<sub order="0x40" stat="sleepVuln" val="#vuln" />
+			<sub order="0x40" stat="paralyzeVuln" val="#vuln" />
+		</for>
+	</skill>
+	<skill id="11256" levels="8" name="召喚伶俐巨熊">
+	<!--
+		<table name="#desc-LV1">召喚妖精界可愛的熊。消耗召喚點數3點。</table>
+	-->
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 351 361 376 391 406 421 436 456 </table>
+		<table name="#npcId"> 14929 14947 14948 14949 14950 14951 14952 14953</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="3800"/>
+		<set name="coolTime" val="200"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="isMagic" val="1"/> <!-- FIXME 2? -->
+		<set name="magicLvl" val="#magicLvl"/>
+		<set name="mpConsume" val="#mpConsume"/>
+		<set name="npcId" val="#npcId" />
+		<set name="summonPoint" val="3" />
+	</skill>
+	<skill id="11257" levels="8" name="召喚劍齒利虎">
+	<!--
+		<table name="#desc-LV1">召喚野獸界勇猛的老虎。消耗召喚點數2點。</table>
+	-->
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 351 361 376 391 406 421 436 456 </table>
+		<table name="#npcId"> 14930 14954 14955 14956 14957 14958 14959 14960</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="3800"/>
+		<set name="coolTime" val="200"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="isMagic" val="1"/>
+		<set name="magicLvl" val="#magicLvl"/>
+		<set name="mpConsume" val="#mpConsume"/>
+		<set name="npcId" val="#npcId" />
+		<set name="summonPoint" val="2" />
+	</skill>
+	<skill id="11258" levels="8" name="召喚殘酷死神">
+	<!--
+		<table name="#desc-LV1">召喚魔界惡名昭彰的死神。消耗召喚點數2點。</table>
+	-->
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 351 361 376 391 406 421 436 456 </table>
+		<table name="#npcId"> 14931 14961 14962 14963 14964 14965 14966 14967</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="3800"/>
+		<set name="coolTime" val="200"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="isMagic" val="1"/>
+		<set name="magicLvl" val="#magicLvl"/>
+		<set name="mpConsume" val="#mpConsume"/>
+		<set name="npcId" val="#npcId" />
+		<set name="summonPoint" val="2" />
+	</skill>
+	<skill id="11259" levels="8" name="Week of Nice marked">
+		<table name="#DOT"> 269 272 276 280 283 287 290 294 </table>
+		<set name="mpInitialConsume" val="5" />
+		<set name="mpConsume" val="43" />
+		<set name="magicLvl" val="85" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="lvlDepend" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="hitTime" val="4000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="POISON" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<for>
+			<effect count="10" name="DamOverTime" abnormalTime="1" val="#DOT" abnormalLvl="7" abnormalType="poison" abnormal="poison" />
+		</for>
+	</skill>
+	<skill id="11260" levels="5" name="Mark Boyd">
+		<table name="#DOT"> 335 343 350 356 363 </table>
+		<set name="mpInitialConsume" val="5" />
+		<set name="mpConsume" val="43" />
+		<set name="magicLvl" val="85" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="lvlDepend" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="hitTime" val="4000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="DRAIN" />
+		<set name="absorbPart" val="0.4" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<for>
+			<effect count="10" name="DamOverTime" abnormalTime="4" val="#DOT" abnormalLvl="7" abnormalType="poison" abnormal="poison" />
+		</for>
+	</skill>
+	<skill id="11261" levels="6" name="Flemish Executive of Marks">
+		<table name="#DOT"> 370 375 382 389 397 404 </table>
+		<set name="mpInitialConsume" val="5" />
+		<set name="mpConsume" val="43" />
+		<set name="magicLvl" val="85" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="lvlDepend" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="hitTime" val="4000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="POISON" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<for>
+			<effect count="15" name="DamOverTime" abnormalTime="1" val="#DOT" abnormalLvl="7" abnormalType="poison" abnormal="poison" />
+		</for>
+	</skill>
+	<skill id="11262" levels="6" name="Tricks of Mark">
+		<table name="#DOT"> 303 305 311 317 322 328 </table>
+		<set name="mpInitialConsume" val="5" />
+		<set name="mpConsume" val="43" />
+		<set name="magicLvl" val="85" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="lvlDepend" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="reuseDelay" val="3000" />
+		<set name="isDebuff" val="true" />
+		<set name="hitTime" val="4000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="POISON" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<for>
+			<effect count="5" name="DamOverTime" abnormalTime="1" val="#DOT" abnormalLvl="7" abnormalType="poison" abnormal="poison" />
+			<effect name="Mute" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="silence" />
+		</for>
+	</skill>
+	<skill id="11263" levels="7" name="Invoke">
+		<table name="#mpConsume"> 227 236 245 255 265 276 286 </table>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="2560"/>
+		<set name="coolTime" val="500"/>
+		<set name="reuseDelay" val="15000"/>
+		<set name="castRange" val="600"/>
+		<set name="effectRange" val="1100"/>
+		<set name="isMagic" val="1"/>
+		<set name="mpConsume" val="#mpConsume"/>
+	</skill>
+	<skill id="11264" levels="4" name="Strong Will">
+		<table name="#hpConsume"> 400 420 440 460 </table>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="1200"/>
+		<set name="coolTime" val="300"/>
+		<set name="reuseDelay" val="60000"/>
+		<set name="isMagic" val="1"/>
+		<set name="hpConsume" val="#hpConsume"/>
+	</skill>
+	<skill id="11265" levels="1" name="Summon Team Mate">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="1390"/>
+		<set name="coolTime" val="300"/>
+		<set name="reuseDelay" val="60000"/>
+		<set name="isMagic" val="1"/>
+		<set name="mpConsume" val="71"/>
+	</skill>
+	<skill id="11266" levels="1" name="Summon Death Gate">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="5000"/>
+		<set name="coolTime" val="500"/>
+		<set name="reuseDelay" val="600000"/>
+		<set name="castRange" val="900"/>
+		<set name="effectRange" val="1400"/>
+		<set name="mpConsume" val="94"/>
+	</skill>
+	<skill id="11267" levels="3" name="Spirit of Naviarope">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A2"/>
+		<set name="hitTime" val="2500"/>
+		<set name="coolTime" val="500"/>
+		<set name="reuseDelay" val="3600000"/>
+		<set name="castRange" val="600"/>
+		<set name="effectRange" val="1100"/>
+		<set name="mpConsume" val="70"/>
+	</skill>
+	<skill id="11268" levels="8" name="Summon Avenging Cubic">
+		<table name="#mpConsume"> 70 72 75 78 81 84 87 91 </table>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="coolTime" val="500"/>
+		<set name="reuseDelay" val="60000"/>
+		<set name="isMagic" val="1"/>
+		<set name="mpConsume" val="#mpConsume"/>
+	</skill>
+	<skill id="11269" levels="1" name="Mana-sharing">
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="1400" />
+		<set name="power" val="1400" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="reuseDelay" val="3000" />
+		<set name="hitTime" val="6000" />
+		<set name="skillType" val="MANAHEAL" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+	</skill>
+	<skill id="11270" levels="4" name="Ultimate Transfer Pain">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="T"/>
+		<set name="isMagic" val="1"/>
+		<set name="mpConsume" val="70"/>
+	</skill>
+	<skill id="11271" levels="8" name="Mark Retriever">
+		<table name="#mpConsume"> 74 76 79 82 85 89 92 96 </table>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="1760"/>
+		<set name="coolTime" val="300"/>
+		<set name="reuseDelay" val="15000"/>
+		<set name="castRange" val="600"/>
+		<set name="effectRange" val="1100"/>
+		<set name="isMagic" val="1"/>
+		<set name="mpConsume" val="#mpConsume"/>
+	</skill>
+	<skill id="11272" levels="1" name="Replace">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="1200"/>
+		<set name="coolTime" val="300"/>
+		<set name="reuseDelay" val="60000"/>
+		<set name="castRange" val="600"/>
+		<set name="effectRange" val="1100"/>
+		<set name="isMagic" val="1"/>
+		<set name="mpConsume" val="97"/>
+	</skill>
+	<skill id="11273" levels="5" name="Exile">
+		<table name="#mpConsume"> 78 83 87 92 97 </table>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A2"/>
+		<set name="hitTime" val="1500"/>
+		<set name="coolTime" val="500"/>
+		<set name="reuseDelay" val="60000"/>
+		<set name="castRange" val="600"/>
+		<set name="effectRange" val="1100"/>
+		<set name="isMagic" val="1"/>
+		<set name="mpConsume" val="#mpConsume"/>
+	</skill>
+	<skill id="11274" levels="4" name="Summon Barrier">
+		<table name="#mpConsume"> 78 86 94 97 </table>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A2"/>
+		<set name="hitTime" val="1500"/>
+		<set name="coolTime" val="200"/>
+		<set name="reuseDelay" val="300000"/>
+		<set name="isMagic" val="1"/>
+		<set name="mpConsume" val="#mpConsume"/>
+	</skill>
+	<skill id="11276" levels="3" name="Dimensional Binding">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="10000"/>
+		<set name="reuseDelay" val="300000"/>
+		<set name="castRange" val="900"/>
+		<set name="effectRange" val="1400"/>
+		<set name="isDebuff" val="True"/>
+		<set name="mpConsume" val="90"/>
+	</skill>
+	<skill id="11278" levels="9" name="熊之利爪">
+	<!--
+		<table name="#desc-LV1">激起敵人的攻擊慾望，並給予傷害。</table>
+	-->
+		<table name="#magicLvl"> 85 86 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 79 81 84 86 89 92 95 98 99 </table>
+		<table name="#power"> 2000 2200 2400 2600 2800 3000 3200 3400 3600 </table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="A2"/>
+		<set name="hitTime" val="1560"/>
+		<set name="coolTime" val="500"/>
+		<set name="reuseDelay" val="15000"/>
+		<set name="castRange" val="50"/>
+		<set name="effectRange" val="900"/>
+		<set name="isDebuff" val="True"/>
+		<set name="magicLvl" val="#magicLvl"/>
+		<set name="mpConsume" val="#mpConsume"/>
+		<set name="power" val="#power"/>
+		<set name="aggroPoints" val="9999" /> <!-- FIXME -->
+	</skill>
+	<skill id="11279" levels="9" name="熊之翻滾">
+	<!--
+		<table name="#desc-LV1">就地翻滾，並對大地造成衝擊，且將周圍目標暫時處於無法移動的狀態。</table>
+	-->
+		<table name="#magicLvl"> 85 86 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 332 337 349 360 372 384 396 408 414 </table>
+		<table name="#power"> 2000 2200 2400 2600 2800 3000 3200 3400 3600 </table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="A2"/>
+		<set name="hitTime" val="1660"/>
+		<set name="coolTime" val="500"/>
+		<set name="reuseDelay" val="7000"/>
+		<set name="magicLvl" val="#magicLvl"/>
+		<set name="mpConsume" val="#mpConsume"/>
+		<set name="power" val="#power"/>
+		<for>
+			<effect name="Root" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="root_magically" />
+		</for>
+	</skill>
+	<skill id="11280" levels="9" name="虎之咬嚙">
+<!-- 		<table name="#desc-LV1">撕咬目標，並給予傷害。</table> -->
+		<table name="#magicLvl"> 85 86 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 79 81 84 86 89 92 95 98 99 </table>
+		<table name="#power"> 2000 2200 2400 2600 2800 3000 3200 3400 3600 </table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="1560"/>
+		<set name="coolTime" val="500"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="castRange" val="50"/>
+		<set name="effectRange" val="900"/>
+		<set name="magicLvl" val="#magicLvl"/>
+		<set name="mpConsume" val="#mpConsume"/>
+		<set name="power" val="#power"/>
+	</skill>
+	<skill id="11281" levels="9" name="虎之跳擊">
+<!-- 		<table name="#desc-LV1">跳躍後，針對位於一定距離以上的目標和周圍造成傷害，並降低移動速度50%。</table> -->
+		<table name="#magicLvl"> 85 86 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 194 197 204 210 217 224 231 238 242 </table>
+		<table name="#power"> 2000 2200 2400 2600 2800 3000 3200 3400 3600 </table>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="660"/>
+		<set name="coolTime" val="600"/>
+		<set name="reuseDelay" val="7000"/>
+		<set name="castRange" val="600"/>
+		<set name="effectRange" val="1100"/>
+		<set name="magicLvl" val="#magicLvl"/>
+		<set name="mpConsume" val="#mpConsume"/>
+		<set name="power" val="#power"/>
+		<for>
+			<effect name="Debuff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="speed_down" >
+				<mul order="0x30" stat="runSpd" val="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11282" levels="9" name="死神吸收">
+<!--   	<table name="#desc-LV1">對敵人施予傷害，並將傷害的20%吸取為HP。</table> -->
+		<table name="#magicLvl"> 85 86 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 56 57 59 61 64 66 69 71 73 </table>
+		<table name="#power"> 20 30 40 50 60 70 80 90 100 </table>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DRAIN" />
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="2560"/>
+		<set name="coolTime" val="500"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="castRange" val="900"/>
+		<set name="effectRange" val="1400"/>
+		<set name="isMagic" val="1"/>
+		<set name="magicLvl" val="#magicLvl"/>
+		<set name="mpConsume" val="#mpConsume"/>
+		<set name="power" val="#power"/>
+		<set name="absorbPart" val="0.2" />
+	</skill>
+	<skill id="11283" levels="9" name="死神之力">
+<!-- 		<table name="#desc-LV1">將敵人周圍轉變為死亡空間，並給予傷害。</table> -->
+		<table name="#magicLvl"> 85 86 87 89 91 93 95 97 99 </table>
+		<table name="#mpConsume"> 218 222 231 241 250 260 270 281 286 </table>
+		<table name="#power"> 20 30 40 50 60 70 80 90 100 </table>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="2560"/>
+		<set name="coolTime" val="500"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="castRange" val="500"/>
+		<set name="effectRange" val="1000"/>
+		<set name="isMagic" val="1"/>
+		<set name="magicLvl" val="#magicLvl"/>
+		<set name="mpConsume" val="#mpConsume"/>
+		<set name="power" val="#power"/>
+	</skill>
+	<skill id="11287" levels="1" name="Grand Resist">
+		<set name="magicLvl" val="85" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+				<add order="0x10" stat="INT" val="2" />
+				<add order="0x40" stat="waterRes" val="20" />
+				<add order="0x40" stat="fireRes" val="20" />
+				<add order="0x40" stat="windRes" val="20" />
+				<add order="0x40" stat="earthRes" val="20" />
+				<add order="0x40" stat="mDef" val="199" />
+		</for>
+	</skill>
+	<skill id="11288" levels="3" name="Ability Final sharing">
+		<table name="#atk"> 1.6 1.65 1.7 </table>
+		<set name="magicLvl" val="85" />
+		<set name="target" val="TARGET_SUMMON" />
+		<set name="mpConsume" val="77" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="A1" />
+		<for>
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="buff">
+				<mul order="0x30" stat="pAtk" val="#atk" />
+				<mul order="0x30" stat="pDef" val="#atk" />
+				<mul order="0x30" stat="mAtk" val="1.3" />
+				<mul order="0x30" stat="mDef" val="1.3" />
+				<mul order="0x30" stat="maxHp" val="1.15" />
+				<mul order="0x30" stat="maxMp" val="1.15" />
+				<mul order="0x30" stat="rCrit" val="1.1" />
+				<mul order="0x30" stat="pAtkSpd" val="1.03" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="11295" levels="1" name="Grand Light armor mastery">
+		<set name="magicLvl" val="85" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+				<add order="0x10" stat="INT" val="2" />
+				<add order="0x40" stat="pDef" val="132" />
+				<using kind="Light" />
+		</for>
+	</skill>
+	<skill id="11296" levels="6" name="Mass Exile">
+		<table name="#mpConsume"> 102 106 112 118 125 132 </table>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A2"/>
+		<set name="hitTime" val="3000"/>
+		<set name="coolTime" val="500"/>
+		<set name="reuseDelay" val="300000"/>
+		<set name="castRange" val="600"/>
+		<set name="effectRange" val="1100"/>
+		<set name="isMagic" val="1"/>
+		<set name="mpConsume" val="#mpConsume"/>
+	</skill>
+	<skill id="11297" levels="4" name="Blessing Of Giants">
+		<table name="#spd"> 0.85 0.9 0.95 1 </table>
+		<set name="magicLvl" val="85" />
+		<set name="target" val="TARGET_SUMMON" />
+		<set name="mpConsume" val="78" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="A1" />
+		<for>
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="buff">
+				<mul order="0x30" stat="pAtk" val="1.2" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<mul order="0x30" stat="regHp" val="1.2" />
+				<mul order="0x30" stat="maxMp" val="1.2" />
+				<mul order="0x30" stat="rCrit" val="1.2" />
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<mul order="0x30" stat="runSpd" val="#spd" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="11298" levels="8" name="Mark of Fire">
+		<table name="#mpConsume"> 63 65 68 70 73 76 79 82 </table>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="3360"/>
+		<set name="coolTime" val="200"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="castRange" val="900"/>
+		<set name="effectRange" val="1400"/>
+		<set name="isMagic" val="1"/>
+		<set name="mpConsume" val="#mpConsume"/>
+	</skill>
+	<skill id="11299" levels="1" name="Servitor Balance Life">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="5000"/>
+		<set name="coolTime" val="200"/>
+		<set name="reuseDelay" val="30000"/>
+		<set name="castRange" val="900"/>
+		<set name="effectRange" val="1400"/>
+		<set name="isMagic" val="1"/>
+		<set name="mpConsume" val="63"/>
+	</skill>
+	<skill id="11302" levels="8" name="Major Heal seobiteo">
+		<table name="#HP">1488 1495 1507 1519 1532 1544 1557 1570</table>
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="70" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#HP" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="HEAL" />
+		<set name="target" val="TARGET_PET" />
+	</skill>
+	<skill id="11303" levels="1" name="Mass seobiteo Magic Shield">
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="70" />
+		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
+		<set name="reuseDelay" val="2000" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<for>
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="md_up">
+				<mul order="0x30" stat="mDef" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="11304" levels="1" name="Seobiteo Mass Haste">
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="70" />
+		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
+		<set name="reuseDelay" val="2000" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<for>
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="attack_time_down">
+				<mul order="0x30" stat="pAtkSpd" val="1.34" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="11305" levels="1" name="Mass physical shield seobiteo">
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="70" />
+		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
+		<set name="reuseDelay" val="2000" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<for>
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="pd_up">
+				<mul order="0x30" stat="pDef" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="11306" levels="1" name="Mass seobiteo empawo">
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="70" />
+		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
+		<set name="reuseDelay" val="2000" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<for>
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="ma_up">
+				<mul order="0x30" stat="mAtk" val="1.79" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="11307" levels="1" name="Mass seobiteo Dynamite">
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="70" />
+		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
+		<set name="reuseDelay" val="2000" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<for>
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="pa_up">
+				<mul order="0x30" stat="pAtk" val="1.17" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="11308" levels="1" name="Seobiteo Mass Fast">
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="70" />
+		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
+		<set name="reuseDelay" val="2000" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<for>
+			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="speed_up">
+				<add order="0x40" stat="pAtk" val="34" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="11309" levels="1" name="Blessing Mass seobiteo">
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="70" />
+		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
+		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="NEGATE" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="negateAbnormals" val="root_physically,1;root_magically,1;paralyze,1;attack_time_up,3;speed_down,3" />
+		<set name="aggroPoints" val="582" />
+	</skill>
+	<skill id="11310" levels="2" name="Meat Alternate Defense Mass seobiteo">
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="70" />
+		<set name="target" val="TARGET_PET" /> <!-- NOT DONE Ned core support for target -->
+		<set name="reuseDelay" val="900000" />
+		<set name="hitTime" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<for>
+			<effect name="ImmobilePetBuff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="pd_up_special">
+				<add order="0x40" stat="pDef" val="4608" />
+				<add order="0x40" stat="mDef" val="4212" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="11311" levels="1" name="lion roar">
+		<set name="mpInitialConsume" val="14" />
+		<set name="mpConsume" val="56" />
+		<set name="magicLvl" val="77" />
+		<set name="power" val="85" /> <!-- Base Land Rate -->
+		<set name="lvlDepend" val="2" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="reuseDelay" val="35000" />
+		<set name="hitTime" val="4000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="MUTE" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1100" />
+	</skill>
+	<skill id="11312" levels="1" name="Lion's Claw">
+		<set name="castRange" val="1290" />
+		<set name="coolTime" val="200" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="800" />
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="50" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="80000" />
+		<set name="reuseDelay" val="20000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="SSBoost" val="2.0" />
+		<set name="target" val="TARGET_FRONT_AREA" />
+	</skill>
+	<skill id="11313" levels="1" name="Lion strike">
+		<table name="#mpConsume">90</table>
+		<table name="#power">7645</table>
+		<table name="#magicLvl">85</table>
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="power" val="#power" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="nextActionAttack" val="true" />
+		<set name="lvlDepend" val="1" />
+		<set name="target" val="TARGET_ONE" />
+		<set name="overHit" val="true" />
+		<set name="SSBoost" val="2.0" />
+		<set name="reuseDelay" val="3000" />
+		<set name="hitTime" val="1080" />
+		<set name="coolTime" val="720" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="40" />
+		<set name="isDebuff" val="true" />
+		<set name="effectRange" val="400" />
+		<for>
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+		</for>
+	</skill>
+	<skill id="11314" levels="1" name="flame Lion">
+		<table name="#mpInitialConsume">15</table>
+		<table name="#mpConsume">32</table>
+		<table name="#magicLvl">85</table>
+		<table name="#power">95</table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="power" val="#power" />
+		<set name="target" val="TARGET_AREA" />
+		<set name="skillRadius" val="200" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="reuseDelay" val="4000" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="MDAM" />
+		<set name="isMagic" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="castRange" val="500" />
+		<set name="effectRange" val="1000" />
+	</skill>
+	<skill id="11316" levels="1" name="Summon Soulshots">
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="A1"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="60000"/>
+		<set name="isMagic" val="1"/>
+		<set name="mpConsume" val="398"/>
+	</skill>
+</list>

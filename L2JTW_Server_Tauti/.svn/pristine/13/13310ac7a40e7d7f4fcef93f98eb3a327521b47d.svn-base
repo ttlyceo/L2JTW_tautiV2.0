@@ -1,0 +1,70 @@
+# ---------------------------------------------------------------------------
+# L2JTW Addon
+# ---------------------------------------------------------------------------
+# Allow Console to show player's chat.
+# Default : False
+AltShowChat = False
+
+# Allow keyboard movement
+# Default : False
+AllowKeyboardMovement = False
+
+# Update the status of non-selected target
+# Default : True
+UpdateOthers = True
+
+# Allow Auto Awaking
+# Default : True
+AutoAwaking = True
+
+# ---------------------------------------------------------------------------
+# Custom settings
+# ---------------------------------------------------------------------------
+# Maximum title string when player set up the personal store
+# Default : 29
+StoreTitleSize = 29
+
+# Player enter world announce , GM will not be announced.
+# Default : False
+EnterWorldAnnounce = False
+
+# Announce message template.
+# Works only if EnterWorldAnnounce = True
+EnterWorldAnnounceMsg = Welcome $player enter the Lineage2 world.
+
+# 
+BodyZaMinutu = 20
+
+# Max BookMark Slot(Need 3x)
+MaxBookMarkSlot = 9
+
+# ---------------------------------------------------------------------------
+# Freya
+# ---------------------------------------------------------------------------
+# Minimum Players to enter Freya Castle
+# Retail: 11
+# Default: 11
+MinFreyaPlayers = 11
+
+# Maximum Players to enter Freya Castle
+# Default: 27
+MaxFreyaPlayers = 27
+
+# Minimum level for Players to enter Freya Castle
+# Default: 82
+MinLevelPlayers = 82
+
+# ---------------------------------------------------------------------------
+# Freya - Hardcore mode
+# ---------------------------------------------------------------------------
+# Minimum Players to enter Freya Castle
+# Default: 36
+MinFreyaHcPlayers = 36
+
+# Maximum Players to enter Freya Castle
+# Default: 45
+MaxFreyaHcPlayers = 45
+
+# Minimum level for Players to enter Freya Castle
+# Default: 82
+MinLevelHcPlayers = 82

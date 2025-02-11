@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.6.5
+Created-By: 1.4.2_10-b03 (Sun Microsystems Inc.)
+Main-Class: org.python.util.jython
+Built-By: HUO
+
+Name: Build-Info
+version: 2969
+svn-build: ${do.checkout}
+threadlocal: true
+secureclassloader: true
+servlet: true
+readline: true
+oracle: true
+informix: true
+mysql: true
+postgresql: true
+jndi: true
+jdbc: true
+jdbc3_0: true
+build-compiler: modern
+jdk-target-version: 1.2
+debug: true
+optimize: on
+

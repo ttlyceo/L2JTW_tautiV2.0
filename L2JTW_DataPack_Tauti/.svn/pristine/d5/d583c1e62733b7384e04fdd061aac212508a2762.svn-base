@@ -1,0 +1,9 @@
+﻿<html><head><body>新訊息通知：<br>
+為迎接新的改版內容，公告新消息！<br>
+新發現的遺蹟或可以進入的土地，通通都告訴您！
+如果有什麼好奇的，請不要猶豫，全都來問我！<br><br>
+<a action="bypass -h npc_%objectId%_Chat 1">要求移動到有新訊息的地方</a><br>
+<a action="bypass -h npc_%objectId%_Chat 2">移動到大城市</a><br>
+<a action="bypass -h npc_%objectId%_Chat 3">要求處理（結算）之前接到的委託中無法繼續進行的任務</a><br>
+<a action="bypass -h npc_%objectId%_Chat 4">交換領地徽章</a>
+</body></html>
