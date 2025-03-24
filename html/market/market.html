@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <title>交易市場</title>
+    <br>
+    <table width="300" border="0">
+      <tr>
+        <th>物品名稱</th>
+        <th>價格</th>
+        <th>操作</th>
+      </tr>
+      <?list?>
+      <tr>
+        <td><?item_name?></td>
+        <td><?price?></td>
+        <td><button action="bypass -h market_buy <?item_id?>">購買</button></td>
+      </tr>
+      <?/list?>
+    </table>
+    <br>
+    <button action="bypass -h market_sell">我要上架物品</button>
+  </body>
+</html>
